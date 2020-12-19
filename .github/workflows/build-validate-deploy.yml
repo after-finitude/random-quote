@@ -1,4 +1,4 @@
-name: Bookslib Client CI/CD
+name: Quote Generator CI/CD
 
 on: push
 
