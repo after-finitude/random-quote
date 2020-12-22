@@ -1,8 +1,7 @@
 <script lang="ts">
+  import BaseLayout from "~components/BaseLayout.svelte";
+  import Container from "~components/Container.svelte";
   import Quote from "~components/Quote/Quote.svelte";
-
-  import BaseLayout from "~components/styled/BaseLayout.svelte";
-  import Container from "~components/styled/Container.svelte";
 </script>
 
 <BaseLayout>

@@ -32,7 +32,7 @@
     </blockquote>
   {:else}
     <blockquote class="container__quote">
-      <i>Нажмите кнопку для отображения случайно цитаты</i>
+      <i>Нажмите кнопку для отображения случайной цитаты</i>
     </blockquote>
   {/if}
 
