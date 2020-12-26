@@ -1,4 +1,4 @@
-name: Quote Generator CI/CD
+name: Random Quote CI/CD
 
 on: push
 

@@ -1,7 +1,7 @@
 {
-  "name": "quote-generator",
+  "name": "random-quote",
   "version": "0.0.1",
-  "description": "Quote Generator",
+  "description": "Random Quote",
   "author": "Alexander Zenov",
   "private": true,
   "scripts": {
