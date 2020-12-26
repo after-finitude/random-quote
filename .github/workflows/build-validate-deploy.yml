@@ -21,16 +21,13 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v1.2.1
         with:
-          version: 5.13.7
+          version: 5.14.1
 
       - name: Install deps
         run: pnpm i
 
       - name: Build
         run: pnpm build
-
-      - name: TypeScript Validate
-        run: pnpm validate
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
@@ -39,6 +36,3 @@ jobs:
           BRANCH: gh-pages
           FOLDER: public
           CLEAN: true
-
-        env:
-          CI: true
