@@ -36,5 +36,5 @@
     </blockquote>
   {/if}
 
-  <button class="container__button" on:click={viewRandomQuote}>Случайная цитата</button>
+  <button on:click={viewRandomQuote}>Случайная цитата</button>
 </div>
