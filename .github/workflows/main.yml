@@ -21,7 +21,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v1.2.1
         with:
-          version: 5.14.2
+          version: 5.15.1
 
       - name: Install deps
         run: pnpm i
