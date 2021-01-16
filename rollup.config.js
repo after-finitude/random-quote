@@ -64,6 +64,7 @@ export default {
       resolve: ['.svelte', '.ts'],
       entries: [
         { find: '~components', replacement: './src/components' },
+        { find: '~pages', replacement: './src/pages' },
       ],
     }),
     resolve({
@@ -72,7 +73,7 @@ export default {
     }),
     commonjs(),
     typescript({
-      tsconfig: 'tsconfig.json'
+      tsconfig: 'tsconfig.json',
     }),
     json(),
     dev && serve(),
