@@ -1,9 +1,9 @@
 <script lang="ts">
-  import Home from '~pages/Home.svelte';
+  import { Router, Route } from 'svelte-routing';
 
-  import BaseLayout from '~components/BaseLayout.svelte';
+  import Home from '~pages/Home.svelte';
 </script>
 
-<BaseLayout>
-  <Home />
-</BaseLayout>
+<Router>
+  <Route path="" component={Home} />
+</Router>

@@ -1,7 +1,13 @@
-<div class="container">
-  <p class="container__text">Поиск случайной книги</p>
-  <button class="container__button">Начать</button>
-</div>
+<script>
+  import BaseLayout from '~components/BaseLayout.svelte';
+</script>
+
+<BaseLayout>
+  <div class="container">
+    <p class="container__text">Поиск случайной книги</p>
+    <button class="container__button">Начать</button>
+  </div>
+</BaseLayout>
 
 <style lang="scss">
   .container {
