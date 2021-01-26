@@ -17,8 +17,8 @@
     flex-direction: column;
     background-color: #fdb900;
     border-radius: 50%;
-    height: 750px;
-    width: 750px;
+    height: 650px;
+    width: 650px;
 
     &__text {
       color: #ffffff;
