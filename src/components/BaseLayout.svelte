@@ -3,6 +3,13 @@
 </div>
 
 <style lang="scss">
+  :root {
+    --color-white: #ffffff;
+    --color-orange: #fdb900;
+    --color-purple: #512da8;
+    --color-black: #000000;
+  }
+
   :global(body) {
     font-family: Roboto;
     font-weight: 600;
