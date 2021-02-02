@@ -22,5 +22,8 @@
 
     height: 48px;
     width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 176px;
   }
 </style>

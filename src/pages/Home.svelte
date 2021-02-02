@@ -32,7 +32,7 @@
       color: var(--color-purple);
       cursor: pointer;
       background: transparent;
-      border: 3px solid var(--color-purple);
+      border: 2px solid var(--color-purple);
       font-size: 24px;
       height: 64px;
       width: 208px;

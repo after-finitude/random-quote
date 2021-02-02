@@ -1,6 +1,8 @@
 <script lang="ts">
-  import BaseLayout from '~components/BaseLayout.svelte';
   import Autocomplete from '~components/Autocomplete.svelte';
+  import BaseLayout from '~components/BaseLayout.svelte';
+  import BookLayout from '~components/BookLayout.svelte';
+  import BookDetails from '~components/BookDetails.svelte';
 
   type Genre = {
     value: string;
@@ -24,10 +26,14 @@
 </script>
 
 <BaseLayout>
-  <Autocomplete
-    showChevron
-    items={genres}
-    placeholder="Выберите жанр"
-    onSelect={handleSelect}
-  />
+  <BookLayout>
+    <Autocomplete
+      showChevron
+      items={genres}
+      placeholder="Выберите жанр"
+      onSelect={handleSelect}
+    />
+
+    <BookDetails />
+  </BookLayout>
 </BaseLayout>
