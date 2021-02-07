@@ -1,17 +1,19 @@
+<script lang="ts">
+  import type { Book } from '../types';
+
+  export let currentBook: Book;
+</script>
+
 <div class="container">
   <div class="container__description">
-    <div class="container__title">Эрик Рис</div>
+    <div class="container__title">{currentBook.title}</div>
 
     <div class="container__subtitle">
-      «Бизнес с нуля. Метод Lean Startup для быстрого тестирования идей и выбора
-      бизнес-модели»
+      {currentBook.subtitle}
     </div>
 
     <div class="container__text">
-      Основа метода экономичного стартапа, разработанного автором, заключается в
-      быстром тестировании идей на реальных потребителях и постоянной
-      корректировке бизнес-модели — чтобы начинать масштабные вложения в продукт
-      только тогда, когда идея ...
+      {currentBook.description}
     </div>
 
     <div class="container__read-more-button">Читать далее</div>
@@ -19,11 +21,7 @@
     <button class="container__next-book-button">Следующая</button>
   </div>
 
-  <img
-    src="https://png.cmtt.space/paper-media/15/a7/3d/b00e369dd68934.png"
-    class="container__image"
-    alt="book_image"
-  />
+  <img src={currentBook.image} class="container__image" alt="book_image" />
 </div>
 
 <style lang="scss">

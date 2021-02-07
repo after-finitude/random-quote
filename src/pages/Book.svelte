@@ -4,24 +4,30 @@
   import BookLayout from '~components/BookLayout.svelte';
   import BookDetails from '~components/BookDetails.svelte';
 
-  type Genre = {
-    value: string;
-    label: string;
+  import books from '../data/books.json';
+  import genres from '../data/genres.json';
+
+  import type { Book, Genre } from '../types';
+
+  const defaultBook = {
+    title: 'Title',
+    subtitle: 'Subtitle',
+    description: 'Description',
+    image: '',
   };
 
-  const genres: Genre[] = [
-    { value: 'business', label: 'Бизнес' },
-    { value: 'detective', label: 'Детектив' },
-    { value: 'drama', label: 'Драма' },
-    { value: 'history', label: 'История' },
-    { value: 'comedy', label: 'Комедия' },
-    { value: 'novel', label: 'Роман' },
-    { value: 'fantastic', label: 'Фантастика' },
-    { value: 'fantasy ', label: 'Фэнтези' },
-  ];
+  let currentBook: Book = defaultBook;
 
-  const handleSelect = (e) => {
-    console.log('Value: ', e.detail.value);
+  const chooseGenre = (genre: string) => {
+    const booksByGenre: Book[] = books[genre];
+
+    currentBook =
+      booksByGenre[Math.floor(Math.random() * booksByGenre.length)] ??
+      defaultBook;
+  };
+
+  const handleSelect = (e: CustomEvent<Genre>) => {
+    chooseGenre(e.detail.value);
   };
 </script>
 
@@ -34,6 +40,6 @@
       onSelect={handleSelect}
     />
 
-    <BookDetails />
+    <BookDetails {currentBook} />
   </BookLayout>
 </BaseLayout>
