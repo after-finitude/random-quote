@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <div class="container">
   <div class="container__description">
     <div class="container__title">Эрик Рис</div>
