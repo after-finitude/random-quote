@@ -9,14 +9,16 @@
 
   import type { Book, Genre } from '../types';
 
-  const defaultBook = {
+  const defaultBook: Book = {
     title: 'Title',
     subtitle: 'Subtitle',
     description: 'Description',
     image: '',
   };
 
-  let currentBook: Book = defaultBook;
+  const placeholder = 'Выберите жанр';
+
+  let currentBook = defaultBook;
 
   const chooseGenre = (genre: string) => {
     const booksByGenre: Book[] = books[genre];
@@ -34,9 +36,9 @@
 <BaseLayout>
   <BookLayout>
     <Autocomplete
+      {placeholder}
       showChevron
       items={genres}
-      placeholder="Выберите жанр"
       onSelect={handleSelect}
     />
 
