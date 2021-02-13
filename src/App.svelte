@@ -14,3 +14,10 @@
 {:else}
   <Book />
 {/if}
+
+<style lang="scss">
+  :global(body) {
+    font-family: Roboto;
+    font-weight: 600;
+  }
+</style>

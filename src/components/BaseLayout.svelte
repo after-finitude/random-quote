@@ -10,11 +10,6 @@
     --color-black: #000000;
   }
 
-  :global(body) {
-    font-family: Roboto;
-    font-weight: 600;
-  }
-
   .base-layout {
     display: flex;
     justify-content: center;
