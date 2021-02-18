@@ -1,15 +1,11 @@
 <script lang="ts">
-  import BaseLayout from '~components/BaseLayout.svelte';
-
   export let startSelectBook: () => void;
 </script>
 
-<BaseLayout>
-  <div class="container">
-    <p class="container__text">Поиск случайной книги</p>
-    <button on:click={startSelectBook} class="container__button">Начать</button>
-  </div>
-</BaseLayout>
+<div class="container">
+  <p class="container__text">Поиск случайной книги</p>
+  <button on:click={startSelectBook} class="container__button">Начать</button>
+</div>
 
 <style lang="scss">
   .container {

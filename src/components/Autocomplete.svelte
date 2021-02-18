@@ -13,11 +13,11 @@
 
 <style lang="scss">
   .container {
-    --border: 2px solid #512da8;
-    --borderHoverColor: #512da8;
-    --borderFocusColor: #512da8;
+    --border: 2px solid var(--color-purple);
+    --borderHoverColor: var(--color-purple);
+    --borderFocusColor: var(--color-purple);
     --itemHoverBG: rgba(81, 45, 168, 0.4);
-    --itemIsActiveBG: #512da8;
+    --itemIsActiveBG: var(--color-purple);
     --inputFontSize: 18px;
 
     height: 48px;

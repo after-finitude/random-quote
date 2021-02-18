@@ -1,7 +1,5 @@
 <script lang="ts">
   import Autocomplete from '~components/Autocomplete.svelte';
-  import BaseLayout from '~components/BaseLayout.svelte';
-  import BookLayout from '~components/BookLayout.svelte';
   import BookDetails from '~components/BookDetails.svelte';
 
   import books from '../data/books.json';
@@ -33,15 +31,20 @@
   };
 </script>
 
-<BaseLayout>
-  <BookLayout>
-    <Autocomplete
-      {placeholder}
-      showChevron
-      items={genres}
-      onSelect={handleSelect}
-    />
+<div class="container">
+  <Autocomplete
+    {placeholder}
+    showChevron
+    items={genres}
+    onSelect={handleSelect}
+  />
 
-    <BookDetails {currentBook} />
-  </BookLayout>
-</BaseLayout>
+  <BookDetails {currentBook} />
+</div>
+
+<style lang="scss">
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
