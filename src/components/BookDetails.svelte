@@ -1,4 +1,6 @@
 <script lang="ts">
+  import noImage from '~data/images/noImage.jpg';
+
   import type { Book } from '../types';
 
   export let currentBook: Book;
@@ -21,7 +23,11 @@
     <button class="container__next-book-button">Следующая</button>
   </div>
 
-  <img src={currentBook.image} class="container__image" alt="book_image" />
+  <img
+    src={currentBook.image ?? noImage}
+    class="container__image"
+    alt="book_image"
+  />
 </div>
 
 <style lang="scss">

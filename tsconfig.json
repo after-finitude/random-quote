@@ -1,15 +1,17 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
 
-  "include": ["src/**/*.ts", "types/**/*.ts"],
-  "exclude": ["node_modules/*", "public/*"],
+  "include": ["src", "types"],
+  "exclude": ["node_modules", "public"],
+
   "main": "src/main.ts",
 
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "~components/*": ["./src/components/*"],
-      "~pages/*": ["./src/pages/*"]
+      "~pages/*": ["./src/pages/*"],
+      "~data/*": ["./src/data/*"]
     },
     "noEmit": true,
     "resolveJsonModule": true

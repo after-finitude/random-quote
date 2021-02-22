@@ -4,7 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import alias from '@rollup/plugin-alias';
 import fileSize from 'rollup-plugin-filesize';
-import json from '@rollup/plugin-json';
+import image from '@rollup/plugin-image';
 import svelte from 'rollup-plugin-svelte';
 import typescript from 'rollup-plugin-typescript2';
 import livereload from 'rollup-plugin-livereload';
@@ -65,6 +65,7 @@ export default {
       entries: [
         { find: '~components', replacement: './src/components' },
         { find: '~pages', replacement: './src/pages' },
+        { find: '~data', replacement: './src/data' },
       ],
     }),
     resolve({
@@ -75,7 +76,7 @@ export default {
     typescript({
       tsconfig: 'tsconfig.json',
     }),
-    json(),
+    image(),
     dev && serve(),
     dev && livereload('public'),
     prod && terser(),

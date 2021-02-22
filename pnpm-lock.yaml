@@ -3,6 +3,7 @@ dependencies:
 devDependencies:
   '@rollup/plugin-alias': 3.1.2_rollup@2.39.0
   '@rollup/plugin-commonjs': 17.1.0_rollup@2.39.0
+  '@rollup/plugin-image': 2.0.6_rollup@2.39.0
   '@rollup/plugin-json': 4.1.0_rollup@2.39.0
   '@rollup/plugin-node-resolve': 11.2.0_rollup@2.39.0
   '@tsconfig/svelte': 1.0.10
@@ -137,6 +138,18 @@ packages:
       rollup: ^2.30.0
     resolution:
       integrity: sha512-PoMdXCw0ZyvjpCMT5aV4nkL0QywxP29sODQsSGeDpr/oI49Qq9tRtAsb/LbYbDzFlOydVEqHmmZWFtXJEAX9ew==
+  /@rollup/plugin-image/2.0.6_rollup@2.39.0:
+    dependencies:
+      '@rollup/pluginutils': 3.1.0_rollup@2.39.0
+      mini-svg-data-uri: 1.2.3
+      rollup: 2.39.0
+    dev: true
+    engines:
+      node: '>= 8.0.0'
+    peerDependencies:
+      rollup: ^1.20.0 || ^2.0.0
+    resolution:
+      integrity: sha512-bB+spXogbPiFjhBS7i8ajUOgOnVwWK3bnJ6VroxKey/q8/EPRkoSh+4O1qPCw97qMIDspF4TlzXVBhZ7nojIPw==
   /@rollup/plugin-json/4.1.0_rollup@2.39.0:
     dependencies:
       '@rollup/pluginutils': 3.1.0_rollup@2.39.0
@@ -1275,6 +1288,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
+  /mini-svg-data-uri/1.2.3:
+    dev: true
+    resolution:
+      integrity: sha512-zd6KCAyXgmq6FV1mR10oKXYtvmA9vRoB6xPSTUJTbFApCtkefDnYueVR1gkof3KcdLZo1Y8mjF2DFmQMIxsHNQ==
   /minimatch/3.0.4:
     dependencies:
       brace-expansion: 1.1.11
@@ -2345,6 +2362,7 @@ packages:
 specifiers:
   '@rollup/plugin-alias': ^3.1.2
   '@rollup/plugin-commonjs': 17.1.0
+  '@rollup/plugin-image': ^2.0.6
   '@rollup/plugin-json': ^4.1.0
   '@rollup/plugin-node-resolve': 11.2.0
   '@tsconfig/svelte': 1.0.10

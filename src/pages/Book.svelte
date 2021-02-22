@@ -2,8 +2,8 @@
   import Autocomplete from '~components/Autocomplete.svelte';
   import BookDetails from '~components/BookDetails.svelte';
 
-  import books from '../data/books.json';
-  import genres from '../data/genres.json';
+  import { books, genres } from '~data/booksAndGenres.ts';
+  import noImage from '~data/images/noImage.jpg';
 
   import type { Book, Genre } from '../types';
 
@@ -11,7 +11,7 @@
     title: 'Title',
     subtitle: 'Subtitle',
     description: 'Description',
-    image: '',
+    image: noImage,
   };
 
   const placeholder = 'Выберите жанр';
