@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "rollup -c -w",
     "start": "sirv public",
-    "build": "pnpm run validate && rimraf public/build && rollup -c",
+    "build": "rimraf public/build && rollup -c",
     "clean": "rimraf public/build node_modules",
     "validate": "svelte-check"
   },
