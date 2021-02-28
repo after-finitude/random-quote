@@ -66,6 +66,7 @@ export default {
         { find: '~components', replacement: './src/components' },
         { find: '~pages', replacement: './src/pages' },
         { find: '~data', replacement: './src/data' },
+        { find: '~utils', replacement: './src/utils' },
       ],
     }),
     resolve({

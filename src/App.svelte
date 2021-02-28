@@ -2,7 +2,10 @@
   import Home from '~pages/Home.svelte';
   import Book from '~pages/Book.svelte';
 
+  import { checkMobile } from '~utils/checkMobile.ts';
+
   let isHomePage = true;
+  const isMobile = checkMobile();
 
   const startSelectBook = () => {
     isHomePage = false;
@@ -10,7 +13,9 @@
 </script>
 
 <div class="container">
-  {#if isHomePage}
+  {#if isMobile}
+    <p>Sorry, mobile devices are not yet supported.</p>
+  {:else if isHomePage}
     <Home {startSelectBook} />
   {:else}
     <Book />
