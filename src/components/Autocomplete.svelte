@@ -1,7 +1,10 @@
 <script lang="ts">
   import Select from 'svelte-select';
 
-  export let items: Record<string, any>[];
+  export let items: {
+    value: string;
+    label: string;
+  }[];
   export let placeholder: string;
   export let showChevron: boolean;
   export let onSelect: (e: any) => void;
